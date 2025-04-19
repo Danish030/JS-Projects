@@ -1,0 +1,139 @@
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #121212;
+  --primary-color: #1f1f2e;
+  --secondary-color: #28293e;
+  --accent-color: #ff6f61;
+  --text-color: #ffffff;
+  --button-hover: #ff8a75;
+  --border-color: #3a3a5e;
+  --highlight-yellow: #ffd700; /* Added yellow tone */
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: var(--text-color);
+  padding: 20px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--highlight-yellow); /* Yellow tone for the title */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  cursor: pointer;
+  width: 140px;
+  padding: 12px 20px;
+  margin: 10px;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.rules-container {
+ cursor: pointer;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  border: 2px solid var(--highlight-yellow); /* Yellow border for emphasis */
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.rules-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rules-container p,
+.rules-container li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+@media (min-width: 760px) {
+  .rules-container {
+    width: 50%;
+  }
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.score {
+  font-weight: 700;
+  color: var(--highlight-yellow); /* Yellow tone for scores */
+}
+
+.options-container {
+  margin: 20px 0;
+}
+
+.results-container {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#winner-msg {
+  margin-top: 25px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--highlight-yellow); /* Yellow tone for winner message */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#reset-game-btn {
+  display: none;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#reset-game-btn:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
