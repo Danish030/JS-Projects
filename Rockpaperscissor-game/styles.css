@@ -1,5 +1,4 @@
-/* Import the Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 *,
 *::before,
@@ -10,30 +9,35 @@
 }
 
 :root {
-  --background-color: #121212;
-  --primary-color: #1f1f2e;
-  --secondary-color: #28293e;
-  --accent-color: #ff6f61;
-  --text-color: #ffffff;
-  --button-hover: #ff8a75;
-  --border-color: #3a3a5e;
-  --highlight-yellow: #ffd700; /* Added yellow tone */
+  --background-color: #f3f5f4;
+  --primary-color: #d6e5e3;
+  --secondary-color: #bcd9d1;
+  --accent-color: #f4c095;
+  --text-color: #3a3a3a;
+  --button-hover: #f7d3b8;
+  --border-color: #9cbfb4;
+  --highlight-color: #f2b5b5;
 }
 
 body {
-  background-color: var(--background-color);
-  font-family: 'Poppins', sans-serif;
+  background-image: url('https://i.imgur.com/8z5kF9y.jpg'); /* Replace with a Ghibli-style background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Handlee', cursive;
   text-align: center;
   color: var(--text-color);
   padding: 20px;
+  min-height: 100vh;
 }
+
 
 h1 {
   margin: 20px 0;
   font-size: 2.8rem;
-  font-weight: 700;
-  color: var(--highlight-yellow); /* Yellow tone for the title */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  color: #354b45;
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.8);
 }
 
 .btn {
@@ -41,31 +45,31 @@ h1 {
   width: 140px;
   padding: 12px 20px;
   margin: 10px;
-  color: var(--text-color);
-  background-color: var(--accent-color);
-  border: none;
+  color: #fff;
+  background-color: #88c0d0; /* Soft pastel blue */
+  border: 2px solid #5e81ac; /* Slightly darker border */
   border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: var(--button-hover);
+  background-color: #81a1c1; /* Slightly darker pastel blue */
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3);
 }
 
 .rules-container {
- cursor: pointer;
+  cursor: pointer;
   padding: 20px;
   margin: 20px auto;
   border-radius: 15px;
-  border: 2px solid var(--highlight-yellow); /* Yellow border for emphasis */
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px dashed var(--highlight-color);
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
 }
 
 .rules-container ul {
@@ -76,47 +80,43 @@ h1 {
 .rules-container p,
 .rules-container li {
   margin: 10px 0;
-  font-size: 1rem;
-}
-
-@media (min-width: 760px) {
-  .rules-container {
-    width: 50%;
-  }
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .score-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
   margin: 30px 0;
   font-size: 1.5rem;
-  font-weight: 600;
 }
 
 .score {
-  font-weight: 700;
-  color: var(--highlight-yellow); /* Yellow tone for scores */
+  font-weight: bold;
+  color: #d45d79;
 }
 
 .options-container {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .results-container {
   font-size: 1.3rem;
-  margin: 20px 0;
+  margin: 20px auto;
   padding: 20px;
+  max-width: 600px;
   border-radius: 15px;
-  background-color: var(--secondary-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 #winner-msg {
   margin-top: 25px;
   font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--highlight-yellow); /* Yellow tone for winner message */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  color: #c25555;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
 }
 
 #reset-game-btn {
@@ -125,15 +125,14 @@ h1 {
   padding: 12px 25px;
   font-size: 1rem;
   border-radius: 30px;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  border: none;
+  background-color: #88c0d0; /* Soft pastel blue */
+  color: #fff;
+  border: 2px solid #5e81ac;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 #reset-game-btn:hover {
-  background-color: var(--button-hover);
+  background-color: #81a1c1;
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
