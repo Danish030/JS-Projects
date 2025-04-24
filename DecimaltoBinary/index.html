@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decimal to Binary Converter</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>
+      Decimal to Binary Converter
+    </h1>
+    <section class="main-container">
+      <label for="number-input">Enter a decimal number:
+        <span id="show-input"></span>
+      </label>
+      
+      <div class="input-container">
+      <input
+        value=""
+        type="number"
+        name="decimal number input"
+        id="number-input"
+        class="number-input"
+        placeholder="Enter a number..."
+      />
+      <button class="convert-btn" id="convert-btn">Convert</button>
+    </div>
+    </section>
+    <section class="output-container">
+      <output id="result" for="number-input"></output>
+      <h2>Call Stack</h2>
+      <div id="animation-container"></div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
