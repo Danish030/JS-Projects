@@ -2,7 +2,7 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 const animationContainer = document.getElementById("animation-container");
-const showInput = document.getElementById("show-input")
+const showInput = document.getElementById("show-input");
 const animationData = [
   {
     inputVal: 5,
@@ -68,9 +68,7 @@ const checkUserInput = () => {
     alert("Please provide a decimal number greater than or equal to 0");
     return;
   }
-  // Update the `showInput` element with the current input value
   showInput.innerText = `${numberInput.value}`;
-
   if (inputInt === 5) {
     showAnimation();
     return;
@@ -78,7 +76,6 @@ const checkUserInput = () => {
 
   result.textContent = decimalToBinary(inputInt);
   numberInput.value = "";
-  
 };
 
 convertBtn.addEventListener("click", checkUserInput);
@@ -88,5 +85,3 @@ numberInput.addEventListener("keydown", (e) => {
     checkUserInput();
   }
 });
-
-
