@@ -1,31 +1,42 @@
-<!DOCTYPE =html>
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico">
     <title>Palindrome Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+<body>
+    <header class="header">
+        <h1>Palindrome Checker</h1>
+    </header>
     <main class="container">
-      <img class="freecodecamp-logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo">
-      <h1 class="title">Is it a Palindrome?</h1>
-      <div class="palindrome-div">
-        <label for="text-input">Enter in text to check for a palindrome:
-        </label>
-        <input class="palindrome-input" id="text-input" value="" type="text">
-        <button class="palindrome-btn" id="check-btn">Check</button>
-        <div class="results-div" id="result"><p class="user-input">case is not a palindrome.</p></div>
-      </div>
-      <div class="palindrome-definition-div">
-        <p class="palindrome-definition">
-          <span role="img" aria-label="light-bulb">💡</span>
-          A <dfn>palindrome</dfn> is a word or sentence that's spelled the same
-          way both forward and backward, ignoring punctuation, case, and
-          spacing.
-        </p>
-      </div>
+        <div class="card">
+            <h2 class="title">Is it a Palindrome?</h2>
+            <div class="palindrome-div">
+                <label for="text-input">Enter text to check for a palindrome:</label>
+                <input class="palindrome-input" id="text-input" type="text" placeholder="Type here...">
+                <button class="palindrome-btn" id="check-btn">Check</button>
+                <div class="results-div" id="result">
+                    <p class="user-input">Your result will appear here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="palindrome-definition-div">
+            <p class="palindrome-definition">
+                <span role="img" aria-label="light-bulb">💡</span>
+                A <dfn>palindrome</dfn> is a word or sentence that's spelled the same
+                way both forward and backward, ignoring punctuation, case, and
+                spacing.
+            </p>
+        </div>
     </main>
+    <footer class="footer">
+        <p>Made with ❤️ by Danish Ansari</p>
+    </footer>
     <script src="script.js"></script>
-</body></html>
+</body>
+</html>

@@ -4,8 +4,8 @@ This repository contains multiple JavaScript projects, each in its own folder. B
 
 ## Main Project Index
 - **Description**: A landing page that links to all the projects in this repository.
-- **Code Repository**: [GitHub Link](https://github.com/Danish030/https---github.com-Danish030-JS-Projects)
-- **Live URL**: [Live Demo](https://danish030.github.io/https---github.com-Danish030-JS-Projects/)
+- **Code Repository**: [GitHub Link](https://github.com/Danish030/JS-Projects)
+- **Live URL**: [Live Demo](https://danish030.github.io/JS-Projects/)
 
 ---
 
@@ -13,15 +13,15 @@ This repository contains multiple JavaScript projects, each in its own folder. B
 
 ### 1. [Calorie Counter](Caloriue%20Counter/)
 - **Description**: A web application to track daily calorie intake and exercise.
-- **Code Repository**: [GitHub Link](https://github.com/Danish030/https---github.com-Danish030-JS-Projects/tree/main/Caloriue%20Counter)
-- **Live URL**: [Live Demo](https://danish030.github.io/https---github.com-Danish030-JS-Projects/Caloriue%20Counter/)
+- **Code Repository**: [GitHub Link](https://github.com/Danish030/JS-Projects/tree/main/Caloriue%20Counter)
+- **Live URL**: [Live Demo](https://danish030.github.io/JS-Projects/Caloriue%20Counter/index.html)
 
 ---
 
 ### 2. [Palindrome Checker](Palindrome-checker/)
 - **Description**: A tool to check if a given text is a palindrome.
-- **Code Repository**: [GitHub Link](https://github.com/Danish030/https---github.com-Danish030-JS-Projects/tree/main/Palindrome-checker)
-- **Live URL**: [Live Demo](https://danish030.github.io/https---github.com-Danish030-JS-Projects/Palindrome-checker/)
+- **Code Repository**: [GitHub Link](https://github.com/Danish030/JS-Projects/tree/main/Palindrome-checker)
+- **Live URL**: [Live Demo](https://danish030.github.io/JS-Projects/Palindrome-checker/)
 
 ---
 
