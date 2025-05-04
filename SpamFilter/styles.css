@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-grey: #1e1e2f;
+  --light-grey: #e4e4e7;
+  --accent-color: #ffcc4c;
+  --accent-hover: #f89808;
+  --card-bg: #2a2a40;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 15px;
+}
+
+header,
+footer {
+  background-color: var(--card-bg);
+  color: var(--light-grey);
+  padding: 15px 0;
+  position: static;
+  width: 100%;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+header h1,
+footer p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+textarea#message-input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  background-color: #1e1e2f;
+  color: var(--light-grey);
+  font-size: 1rem;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea#message-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+button.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-grey);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  padding: 15px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  textarea#message-input {
+    font-size: 0.9rem;
+  }
+
+  button.btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  header h1,
+  footer p {
+    font-size: 1.2rem;
+  }
+}

@@ -17,6 +17,7 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+      padding: 1em;
     }
 
     h1 {
@@ -29,10 +30,14 @@
     ul {
       list-style: none;
       padding: 0;
+      width: 100%;
+      max-width: 600px;
     }
 
     li {
       margin: 1em 0;
+      padding-bottom: 1em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     a {
@@ -43,6 +48,9 @@
       padding: 0.5em 1em;
       border-radius: 10px;
       transition: background 0.3s ease;
+      display: inline-block;
+      max-width: 90vw;
+      word-wrap: break-word;
     }
 
     a:hover {
@@ -54,12 +62,23 @@
       font-size: 0.9em;
       color: #666;
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      a {
+        font-size: 1.2em;
+        padding: 0.4em 0.8em;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>🌿 My Projects 🌿</h1>
   <ul>
-    <li><a href="Caloriue Counter/index.html">🍱 Caloriue Counter</a></li>
+    <li><a href="Caloriue Counter/index.html">🍱 Calorie Counter</a></li>
     <li><a href="Palindrome-checker/">🔁 Palindrome Checker</a></li>
     <li><a href="PlayerCard/">🎴 Player Card</a></li>
     <li><a href="Rockpaperscissor-game/index.html">✊✋✌️ Rock Paper Scissors Game</a></li>
@@ -67,6 +86,9 @@
     <li><a href="todo-app/index.html">📝 Todo App</a></li>
     <li><a href="DecimaltoBinary/index.html">0️⃣1️⃣ Decimal to Binary Converter</a></li>
     <li><a href="DecimalToRoman/index.html">0️⃣1️⃣ Decimal to Roman Converter</a></li>
+    <li><a href="SpamFilter/index.html">🛡️ Spam Filter</a></li>
+    <li><a href="StatisticsCalculator/index.html">📊 Statistics Calculator</a></li>
+    <li><a href="sortNumbers/index.html">🔢 Sort Numbers</a></li>
   </ul>
   <footer>
     Made with love & Totoro vibes ✨
