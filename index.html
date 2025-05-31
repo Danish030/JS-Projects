@@ -1,98 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Studio Ghibli Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Handlee', cursive;
-      background-position: center;
-      color: #3a3a3a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 1em;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Studio Ghibli Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --main-color: #3a3a3a;
+    --accent-color: #6b8e23;
+    --bg-color: #eaf4f4;
+    --card-bg: rgba(255, 255, 255, 0.85);
+  }
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-      color: #2c3e50;
-      text-shadow: 1px 1px 2px #fff;
-    }
+  body {
+    margin: 0;
+    font-family: 'Handlee', cursive;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2em;
+    background-image: url('https://images.unsplash.com/photo-1589419215277-1d8e5d4a3e9b'); /* Soft background image */
+    background-size: cover;
+    background-position: center;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      width: 100%;
-      max-width: 600px;
-    }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px #fff;
+    background: rgba(255,255,255,0.6);
+    padding: 0.3em 1em;
+    border-radius: 1em;
+  }
 
-    li {
-      margin: 1em 0;
-      padding-bottom: 1em;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1em;
+    width: 100%;
+    max-width: 1000px;
+  }
 
-    a {
-      text-decoration: none;
-      font-size: 1.5em;
-      color: #2c3e50;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 0.5em 1em;
-      border-radius: 10px;
-      transition: background 0.3s ease;
-      display: inline-block;
-      max-width: 90vw;
-      word-wrap: break-word;
-    }
+  .card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+  }
 
-    a:hover {
-      background: rgba(255, 255, 255, 1);
-    }
+  .card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 1);
+  }
 
-    footer {
-      margin-top: 2em;
-      font-size: 0.9em;
-      color: #666;
-    }
+  .card a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1.2em;
+    word-wrap: break-word;
+  }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
+  .card span {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
 
-      a {
-        font-size: 1.2em;
-        padding: 0.4em 0.8em;
-      }
-    }
-  </style>
+  footer {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: #666;
+    background: rgba(255,255,255,0.6);
+    padding: 0.5em 1em;
+    border-radius: 1em;
+  }
+</style>
 </head>
 <body>
   <h1>🌿 My Projects 🌿</h1>
-  <ul>
-    <li><a href="Caloriue Counter/index.html">🍱 Calorie Counter</a></li>
-    <li><a href="Palindrome-checker/">🔁 Palindrome Checker</a></li>
-    <li><a href="PlayerCard/">🎴 Player Card</a></li>
-    <li><a href="Rockpaperscissor-game/index.html">✊✋✌️ Rock Paper Scissors Game</a></li>
-    <li><a href="musicPlayer/index.html">🎶 Music Player</a></li>
-    <li><a href="todo-app/index.html">Todo App</a></li>
-    <li><a href="DecimaltoBinary/index.html">Decimal to Binary Converter</a></li>
-    <li><a href="DecimalToRoman/index.html">0Decimal to Roman Converter</a></li>
-    <li><a href="SpamFilter/index.html">Spam Filter</a></li>
-    <li><a href="StatisticsCalculator/index.html">Statistics Calculator</a></li>
-    <li><a href="sortNumbers/index.html">Sort Numbers</a></li>
-    <li><a href="Telephone Number Validator/index.html">Telephone Number Validator</a></li>
-    <li><a href="Shopping Cart/index.html"> Shopping Cart</a></li>
-    <li><a href="Platformer game/index.html">Platformer game</a></li>
-  </ul>
+  <div class="grid">
+    <div class="card">
+      <span>🍱</span>
+      <a href="Caloriue Counter/index.html">Calorie Counter</a>
+    </div>
+    <div class="card">
+      <span>🔁</span>
+      <a href="Palindrome-checker/">Palindrome Checker</a>
+    </div>
+    <div class="card">
+      <span>🎴</span>
+      <a href="PlayerCard/">Player Card</a>
+    </div>
+    <div class="card">
+      <span>✊✋✌️</span>
+      <a href="Rockpaperscissor-game/index.html">Rock Paper Scissors Game</a>
+    </div>
+    <div class="card">
+      <span>🎶</span>
+      <a href="musicPlayer/index.html">Music Player</a>
+    </div>
+    <div class="card">
+      <span>📝</span>
+      <a href="todo-app/index.html">Todo App</a>
+    </div>
+    <div class="card">
+      <span>💡</span>
+      <a href="DecimaltoBinary/index.html">Decimal to Binary Converter</a>
+    </div>
+    <div class="card">
+      <span>🏛️</span>
+      <a href="DecimalToRoman/index.html">Decimal to Roman Converter</a>
+    </div>
+    <div class="card">
+      <span>🚫</span>
+      <a href="SpamFilter/index.html">Spam Filter</a>
+    </div>
+    <div class="card">
+      <span>📊</span>
+      <a href="StatisticsCalculator/index.html">Statistics Calculator</a>
+    </div>
+    <div class="card">
+      <span>🔢</span>
+      <a href="sortNumbers/index.html">Sort Numbers</a>
+    </div>
+    <div class="card">
+      <span>☎️</span>
+      <a href="Telephone Number Validator/index.html">Telephone Number Validator</a>
+    </div>
+    <div class="card">
+      <span>🛒</span>
+      <a href="Shopping Cart/index.html">Shopping Cart</a>
+    </div>
+    <div class="card">
+      <span>🪄</span>
+      <a href="Platformer game/index.html">Platformer Game</a>
+    </div>
+  </div>
   <footer>
     Made with love & Totoro vibes ✨
   </footer>
