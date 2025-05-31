@@ -1,0 +1,131 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f7f9fb;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: 400px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60, 72, 88, 0.08);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.phone-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+#user-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  outline: none;
+  background: #f9fafb;
+  box-sizing: border-box;
+}
+
+#user-input:focus {
+  border-color: #3182ce;
+  background: #fff;
+}
+
+#results-div {
+  min-height: 32px;
+  margin-top: 4px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: background 0.2s, color 0.2s;
+  background: #f1f5f9;
+  color: #2d3748;
+  word-break: break-word;
+}
+
+#results-div.success {
+  background: #e6f9ed;
+  color: #2e7d32;
+}
+
+#results-div.error {
+  background: #ffeaea;
+  color: #c62828;
+}
+
+.phone-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 11px 0;
+  border: none;
+  border-radius: 8px;
+  background: #3182ce;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(49, 130, 206, 0.07);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+
+button:hover,
+button:focus {
+  background: #2563eb;
+  box-shadow: 0 4px 16px rgba(49, 130, 206, 0.13);
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 98vw;
+    padding: 18px 6vw 18px 6vw;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  #user-input {
+    font-size: 0.98rem;
+  }
+  button {
+    font-size: 0.98rem;
+    padding: 10px 0;
+  }
+}

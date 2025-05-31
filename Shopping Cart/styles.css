@@ -1,0 +1,269 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #fbbf24;
+  --bg: #f8fafc;
+  --surface: #fff;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 2px 16px 0 rgba(30, 41, 59, 0.08);
+  --radius: 1.2rem;
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+/* Main Layout */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Cart Button */
+#cart-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: var(--shadow);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+#cart-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 24px 0 rgba(37,99,235,0.12);
+}
+
+#show-hide-cart {
+  font-weight: 700;
+}
+
+/* Cart Container */
+#cart-container {
+  display: none;
+  position: fixed;
+  top: 5.5rem;
+  right: 2rem;
+  width: 340px;
+  max-width: 95vw;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 2rem 1.5rem 1.5rem;
+  z-index: 20;
+  transition: box-shadow var(--transition);
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-16px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+#clear-cart-btn {
+  margin-bottom: 1rem;
+  width: 100%;
+  background: var(--accent);
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  padding: 0.6rem 0;
+  box-shadow: var(--shadow);
+  transition: background var(--transition);
+}
+
+#clear-cart-btn:hover {
+  background: #f59e42;
+}
+
+#products-container {
+  margin-bottom: 1rem;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 1px 4px 0 rgba(30,41,59,0.04);
+  font-size: 1rem;
+}
+
+.product-count {
+  font-weight: 600;
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.product-category {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0.3rem 0 0.7rem;
+}
+
+#cart-container p {
+  margin: 0.3rem 0;
+  font-size: 1.05rem;
+}
+
+#cart-container span {
+  font-weight: 600;
+}
+
+/* Dessert Cards */
+#dessert-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.dessert-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.2rem 1.5rem;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.dessert-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(37,99,235,0.10);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.dessert-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.dessert-price {
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.add-to-cart-btn {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.add-to-cart-btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px 0 rgba(37,99,235,0.12);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  #dessert-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  #dessert-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #cart-container {
+    width: 380px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #dessert-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Scrollbar Styling */
+#cart-container,
+#products-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg);
+}
+
+#cart-container::-webkit-scrollbar,
+#products-container::-webkit-scrollbar {
+  width: 8px;
+  background: var(--bg);
+}
+
+#cart-container::-webkit-scrollbar-thumb,
+#products-container::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+}
+
+/* Utility */
+::-webkit-input-placeholder { color: var(--text-light);}
+::-moz-placeholder { color: var(--text-light);}
+:-ms-input-placeholder { color: var(--text-light);}
+::placeholder { color: var(--text-light);}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+:root {
+  --main-bg-color: #6c7971; /* Soft green */
+  --section-bg-color: #fff8e7; /* Warm cream */
+  --golden-yellow: #ffe066;
+  --btn-gradient: linear-gradient(135deg, #ffe066 0%, #f9d29d 100%);
+  --btn-hover-gradient: linear-gradient(135deg, #f9d29d 0%, #ffe066 100%);
+  --platform-color: #a3c585;
+  --player-color: #7ec4cf;
+  --checkpoint-color: #ffe066;
+  --shadow: 0 8px 32px 0 rgba(60, 60, 60, 0.12);
+}
+
+body {
+  background: var(--main-bg-color);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s;
+}
+
+.start-screen {
+  background: var(--section-bg-color);
+  box-shadow: var(--shadow);
+  border-radius: 30px;
+  padding: 32px 24px 16px 24px;
+  width: 90%;
+  max-width: 420px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0.97;
+  border: 3px solid #e2c275;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #6b705c;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #fffbe7;
+}
+
+.instructions {
+  font-size: 1.15rem;
+  color: #7c6f57;
+  margin: 12px 0;
+  line-height: 1.8rem;
+}
+
+.btn {
+  cursor: pointer;
+  width: 140px;
+  margin: 18px auto 0 auto;
+  color: #6b705c;
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: var(--btn-gradient);
+  border: none;
+  border-radius: 18px;
+  padding: 12px 0;
+  box-shadow: 0 4px 16px 0 rgba(60, 60, 60, 0.10);
+  transition: background 0.3s, transform 0.2s;
+  outline: none;
+  display: block;
+}
+
+.btn:hover {
+  background: var(--btn-hover-gradient);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkpoint-screen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  border-radius: 20px;
+  padding: 10px;
+  display: none;
+}
+
+#canvas {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .start-screen {
+    width: 60%;
+    max-width: 700px;
+  }
+
+  .checkpoint-screen {
+    max-width: 300px;
+  }
+}
