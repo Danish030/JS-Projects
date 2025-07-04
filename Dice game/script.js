@@ -9,22 +9,22 @@ const rollDiceBtn = document.getElementById("roll-dice-btn");
 const keepScoreBtn = document.getElementById("keep-score-btn");
 const rulesContainer = document.querySelector(".rules-container");
 const rulesBtn = document.getElementById("rules-btn");
-const modal = document.getElementById("modal")
+const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("close-btn");
 
-rulesBtn.onclick = function(){
-  modal.style.display="block";
-}
+rulesBtn.onclick = function () {
+  modal.style.display = "block";
+};
 
-closeBtn.onclick=function(){
-  modal.style.display="none";
-}
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
 
-window.onclick = function(event){
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 let diceValuesArr = [];
 let score = 0;
